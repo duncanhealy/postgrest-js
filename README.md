@@ -1,54 +1,20 @@
-# `postgrest-js`
+# `postgrest-js` has a new home
 
-[![Build](https://github.com/supabase/postgrest-js/workflows/CI/badge.svg)](https://github.com/supabase/postgrest-js/actions?query=branch%3Amaster)
-[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)
-[![License: MIT](https://img.shields.io/npm/l/@supabase/postgrest-js)](#license)
+**All development has moved to the [Supabase JS Monorepo](https://github.com/supabase/supabase-js)**
 
-Isomorphic JavaScript client for [PostgREST](https://postgrest.org). The goal of this library is to make an "ORM-like" restful interface.
+**If you're looking for the README of `postgrest-js`, you can find it at:**  
+**https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js**
 
-Full documentation can be found [here](https://supabase.github.io/postgrest-js/).
+### What happened?
+This repository was merged into the main Supabase JS monorepo for better coordination, testing, and releases.
 
-### Quick start
+### What you need to do as a contributor:
 
-Install
+- **📖 For documentation**: Visit the [new postgrest-js location](https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js)
+- **🐛 For issues**: Create them in the [supabase-js repository](https://github.com/supabase/supabase-js/issues)
+- **🔧 For contributions**: See the [Contributing Guide](https://github.com/supabase/supabase-js/blob/master/CONTRIBUTING.md)
+- **📚 For migration help**: Read the [Migration Guide](https://github.com/supabase/supabase-js/blob/master/docs/MIGRATION.md)
 
-```bash
-npm install @supabase/postgrest-js
-```
+### What you need to do as an end-user of `@supabase/postgrest-js`
 
-Usage
-
-```js
-import { PostgrestClient } from '@supabase/postgrest-js'
-
-const REST_URL = 'http://localhost:3000'
-const postgrest = new PostgrestClient(REST_URL)
-```
-
-- select(): https://supabase.com/docs/reference/javascript/select
-- insert(): https://supabase.com/docs/reference/javascript/insert
-- update(): https://supabase.com/docs/reference/javascript/update
-- delete(): https://supabase.com/docs/reference/javascript/delete
-
-#### Custom `fetch` implementation
-
-`postgrest-js` uses the [`cross-fetch`](https://www.npmjs.com/package/cross-fetch) library to make HTTP requests, but an alternative `fetch` implementation can be provided as an option. This is most useful in environments where `cross-fetch` is not compatible, for instance Cloudflare Workers:
-
-```js
-import { PostgrestClient } from '@supabase/postgrest-js'
-
-const REST_URL = 'http://localhost:3000'
-const postgrest = new PostgrestClient(REST_URL, {
-  fetch: (...args) => fetch(...args),
-})
-```
-
-## License
-
-This repo is licensed under MIT License.
-
-## Sponsors
-
-We are building the features of Firebase using enterprise-grade, open source products. We support existing communities wherever possible, and if the products don’t exist we build them and open source them ourselves. Thanks to these sponsors who are making the OSS ecosystem better for everyone.
-
-[![New Sponsor](https://user-images.githubusercontent.com/10214025/90518111-e74bbb00-e198-11ea-8f88-c9e3c1aa4b5b.png)](https://github.com/sponsors/supabase)
+Nothing changed! You can continue using `@supabase/postgrest-js` as normal. Nothing has changed in the way the package is published!
